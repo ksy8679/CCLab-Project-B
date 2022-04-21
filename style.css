@@ -40,10 +40,57 @@
 }
 
 .myprojtitle {
-    color: white;
-    font-family: 
+    color: #2B547E;
+    font-family: 'Style Script', cursive;
+    font-size: 30px;
+    position: absolute;
+    top: 200px;
+    left: 605px;
+}
+
+.projtitle {
+    color: #2B547E;
+    font-family: 'Racing Sans One', cursive;
+    font-size: 70px;
+    position: absolute;
+    top: 236px;
+    left: 593px
+}
+
+.projtitle2 {
+    color: #2B547E;
+    font-family: 'Racing Sans One', cursive;
+    font-size: 70px;
+    position: absolute;
+    top: 306px;
+    left: 530px
+}
+
+.clickhere {
+    color: #2B547E;
+    font-family: 'Racing Sans One', cursive;
     font-size: 40px;
     position: absolute;
-    top: 126px;
-    left: 455px;
+    top: 396px;
+    left: 500px
+}
+
+.nextbutton {
+    position: absolute;
+    top: 460px;
+    left: 645px;
+    height: 55px;
+    width: 155px;
+    background: #87CEEB;
+    border-radius: 10px;
+}
+
+.tickets {
+    background-image: url(IMGS/tickets.png);
+    background-position: center;
+    position: absolute;
+    top: 130px;
+    right: 250px;
+    width: 500px;
+    height: 450px;
 }
