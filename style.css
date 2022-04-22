@@ -98,6 +98,17 @@
     z-index: 1;
 }
 
+.heresign a:visited {
+    color: #2B547E;
+    font-family: 'Rampart One', cursive;
+    font-size: 45px;
+    text-decoration: none;
+    position: absolute;
+    top: 452px;
+    left: 662px;
+    z-index: 1;
+}
+
 .heresign a:hover {
     color: white;
     font-family: 'Rampart One', cursive;
