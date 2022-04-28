@@ -3,7 +3,7 @@ https://www.britannica.com/summary/Titanic
 https://css-tricks.com/snippets/css/typewriter-effect/
 */
 
-let words = '"Jack is a young artist who wins a ticket to travel to America on a famous ship. On board the ship, he meets Rose, a high-class girl who is traveling with her mother and her fiancé Cal, a conceited millionaire who is only interested in the prestige of his fiancée\'s family. Jack and Rose fall in love despite the obstacles that her mother and Cal put in their relationship."';
+let words = '"Jack is a young artist who wins a ticket to travel to America on a famous ship. On board the ship, he meets Rose, a high-class girl who is traveling with her mother and her fiancé Cal, a conceited millionaire who is only interested in the prestige of his fiancé\'s family. Jack and Rose fall in love despite the obstacles that her mother and Cal put in their relationship."';
 let myFont = 0;
 let position = 0;
 let lastMilsec = 0;
