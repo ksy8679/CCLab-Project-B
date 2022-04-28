@@ -1,4 +1,55 @@
-html, body {
-  margin: 0;
-  padding: 0;
+* {
+  margin: 0vh;
+  padding: 0vh;
+}
+
+.nextbox a {
+  animation: fadeIn 60s;
+  position: absolute;
+  bottom: 70px;
+  right: 150px;
+  height: 55px;
+  width: 155px;
+  background: #87CEEB;
+  border-radius: 10px;
+}
+
+.nextlink a:link {
+    animation: fadeIn 60s;
+    color: white;
+    font-family: 'Rampart One', cursive;
+    font-size: 45px;
+    text-decoration: none;
+    position: absolute;
+    bottom: 68px;
+    right: 165px;
+    z-index: 1;
+}
+
+
+@keyframes fadeIn {
+  0% {opacity:0;}
+  100% {opacity:1;}
+}
+
+.nextlink a:visited {
+    color: white;
+    font-family: 'Rampart One', cursive;
+    font-size: 45px;
+    text-decoration: none;
+    position: absolute;
+    bottom: 68px;
+    right: 165px;
+    z-index: 1;
+}
+
+.nextlink a:hover {
+    color: black;
+    font-family: 'Rampart One', cursive;
+    font-size: 45px;
+    text-decoration: none;
+    position: absolute;
+    bottom: 68px;
+    right: 165px;
+    z-index: 1;
 }

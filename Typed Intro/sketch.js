@@ -28,7 +28,7 @@ function draw() {
 	
 /*This conditional is also working along with the words.subtring to type each letter because it veryfies if the previous letter was written or not. If it uses millis to read the time it took to write the first letter, and check if the letter was written. IF it was written, then it moves on to write the second letter. However, it is basically writing multiple layers of words because it rewrite the previous one along with the next one.*/
   
-  if (millis() > lastMilsec + 100) {
+  if (millis() > lastMilsec + 95) {
 		position = position + 1;
 		lastMilsec = millis();
 	}
