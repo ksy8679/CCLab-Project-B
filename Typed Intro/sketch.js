@@ -3,7 +3,7 @@ https://www.britannica.com/summary/Titanic
 https://css-tricks.com/snippets/css/typewriter-effect/
 */
 
-let words = '"Jack is a young artist who wins a ticket to travel to America on a famous ship. On board the ship, he meets Rose, a high-class girl who is traveling with her mother and her fiancé Cal, a conceited millionaire who is only interested in the prestige of his fiancé\'s family. Jack and Rose fall in love despite the obstacles that her mother and Cal put in their relationship."';
+let words = '"Jack is a young artist who wins a ticket to travel to America on a famous ship. On board the ship, he meets Rose, a high-class girl who is traveling with her mother and her fiancé Cal, a conceited millionaire who is only interested in the prestige of his fiancée\'s family. Jack and Rose fall in love despite the obstacles that her mother and Cal put in their relationship."';
 let myFont = 0;
 let position = 0;
 let lastMilsec = 0;
@@ -13,6 +13,7 @@ let h = 0;
 function setup() {
   createCanvas(windowWidth, windowHeight); 
   h = 900;
+  typeSound.play();
 }
 
 function draw() {
@@ -28,7 +29,7 @@ function draw() {
 	
 /*This conditional is also working along with the words.subtring to type each letter because it veryfies if the previous letter was written or not. If it uses millis to read the time it took to write the first letter, and check if the letter was written. IF it was written, then it moves on to write the second letter. However, it is basically writing multiple layers of words because it rewrite the previous one along with the next one.*/
   
-  if (millis() > lastMilsec + 95) {
+  if (millis() > lastMilsec + 115) {
 		position = position + 1;
 		lastMilsec = millis();
 	}
