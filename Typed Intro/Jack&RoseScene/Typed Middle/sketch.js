@@ -3,7 +3,7 @@ https://www.britannica.com/summary/Titanic
 https://css-tricks.com/snippets/css/typewriter-effect/
 */
 
-let words = '"Meanwhile, the luxurious ocean liner approaches a huge iceberg...."';
+let words = '"Meanwhile, the luxurious ocean liner approaches a huge iceberg."';
 let myFont = 0;
 let position = 0;
 let lastMilsec = 0;
