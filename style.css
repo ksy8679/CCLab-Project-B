@@ -10,15 +10,17 @@
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-    position: relative;
+    position: absolute;
 }
 
 .square {
-    position: relative;
+    position: absolute;
     top: 94px;
     left: 440px;
-    height: 50%;
-    width: 60%;
+    height: auto;
+    width: 100%;
+    max-width: 910px;
+    max-height: 100px;
     background-color: #0093E9;
     background-image: linear-gradient(160deg, #0093E9 0%, #80D0C7 50%, #ffcc70 100%);
     object-fit: cover;
