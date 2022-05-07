@@ -14,11 +14,12 @@
 }
 
 .square {
-    position: absolute;
+    position: relative;
     top: 94px;
     left: 440px;
-    height: 500px;
-    width: 910px;
+    height: 50%;
+    width: 60%;
+    max-width: 910px;
     background-color: #0093E9;
     background-image: linear-gradient(160deg, #0093E9 0%, #80D0C7 50%, #ffcc70 100%);
     object-fit: cover;
@@ -124,8 +125,10 @@
     background-image: url(IMGS/tickets.png);
     background-position: center;
     position: absolute;
-    top: 130px;
+    top: 170px;
     right: 385px;
-    width: 400px;
-    height: 400px;
+    min-width: 400px;
+    max-width: 400px;
+    width: 25%;
+    height: 30%;
 }
