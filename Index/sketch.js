@@ -29,15 +29,15 @@ function draw() {
   textFont(fontBebas);
   text('Now Presenting', 510, 163);
   
-  fill(43, 84, 126);
+  fill(0,56,107);
   textSize(35);
-  stroke(43, 84, 126);
+  stroke(0,56,107);
   textFont(fontStyle);
   text('Kimberly Yau\'s Project B', 600, 230);
   
-  fill(43, 84, 126);
+  fill(0,56,107);
   textSize(65);
-  stroke(43, 84, 126);
+  stroke(0,56,107);
   textFont(fontRacing);
   text('CINEMA', 623, 300);
   text('EXPERIENCE', 570, 360);
