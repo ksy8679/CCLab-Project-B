@@ -5,7 +5,7 @@
 
 .background {
     height: 100vh;
-    width: 175vh;
+    width: 180vh;
     background-image: url(IMGS/Drive-thru\ Theater.jpeg);
     background-repeat: no-repeat;
     background-position: center;
@@ -16,11 +16,11 @@
 .square {
     position: absolute;
     top: 94px;
-    left: 440px;
-    height: auto;
+    left: 465px;
+    height: 100%;
     width: 100%;
     max-width: 910px;
-    max-height: 100px;
+    max-height: 500px;
     background-color: #0093E9;
     background-image: linear-gradient(160deg, #0093E9 0%, #80D0C7 50%, #ffcc70 100%);
     object-fit: cover;
@@ -28,7 +28,7 @@
 .minisquare {
     position: absolute;
     top: 124px;
-    left: 440px;
+    left: 465px;
     height: 50px;
     width: 240px;
     background-color: #87CEEB;
@@ -40,7 +40,7 @@
     font-size: 40px;
     position: absolute;
     top: 126px;
-    left: 455px;
+    left: 475px;
 }
 
 .myprojtitle p {

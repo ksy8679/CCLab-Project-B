@@ -432,8 +432,8 @@ class Iceberg {
 
 class Dot {
   constructor() {
-    this.xPlane = random(0,windowHeight);
-    this.yPlane = random(0,windowHeight);
+    this.xPlane = random(random(-windowWidth, 2900), random(-windowHeight, 2900));
+    this.yPlane = random(random(-windowWidth, 2900), random(-windowHeight, 2900));
     //this.zPlane = random(0,windowHeight);
     //this.angle = 0;
   }
