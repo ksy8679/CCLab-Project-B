@@ -17,7 +17,7 @@ function setup() {
 function draw() {
   img.resize(windowWidth, windowHeight);
   image(img, 0, 0);
-  gradientCanvas(490, 90, 785, 480, c1, c2);
+  gradientCanvas(490, 90, 785, 505, c1, c2);
   
   noStroke();
   fill(135, 206, 235);
@@ -46,7 +46,7 @@ function draw() {
   
   noStroke();
   fill(135, 206, 235);
-  rect(680, 440, 132, 55, 12);
+  rect(675, 440, 140, 62, 12);
   
   img2.resize(320, 320);
   image(img2, 950, 160);
