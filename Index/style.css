@@ -1,0 +1,50 @@
+* {
+  margin: 0vh;
+  padding: 0vh;
+}
+canvas {
+  display: block;
+}
+
+.nextbutton a {
+  position: absolute;
+  top: 460px;
+  left: 645px;
+  height: 55px;
+  width: 155px;
+  background: #87CEEB;
+  border-radius: 10px;
+}
+
+.heresign a:link {
+  color: #2B547E;
+  font-family: 'Rampart One', cursive;
+  font-size: 45px;
+  text-decoration: none;
+  position: absolute;
+  top: 452px;
+  left: 662px;
+  z-index: 1;
+}
+
+.heresign a:visited {
+  color: #2B547E;
+  font-family: 'Rampart One', cursive;
+  font-size: 45px;
+  text-decoration: none;
+  position: absolute;
+  top: 452px;
+  left: 662px;
+  z-index: 1;
+}
+
+.heresign a:hover {
+  color: white;
+  font-family: 'Rampart One', cursive;
+  font-size: 45px;
+  text-decoration: none;
+  position: absolute;
+  top: 452px;
+  left: 662px;
+  z-index: 1;
+}
