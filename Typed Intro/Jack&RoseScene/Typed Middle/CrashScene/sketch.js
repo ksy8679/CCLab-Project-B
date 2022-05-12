@@ -13,25 +13,29 @@ a rounded rectangle css
 https://www.geeksforgeeks.org/p5-js-quad-function/
 */
 
+let rdy = false;
+
 let colOrange = "#ff7259";
 let colYellow = "#ffab41";
 let colBlue = "#7bceee";
 let colDarkblue = "#1b3045";
 let colGray = "	#b1b1b1";
 let ship, clouds;
-let xCoordinates1 = [];
+/*let xCoordinates1 = [];
 let xCoordinates2 = [];
 let xCoordinates3 = [];
 let xCoordinates4 = [];
 let yCoordinates1 = [];
 let yCoordinates2 = [];
 let yCoordinates3 = [];
-let yCoordinates4 = [];
+let yCoordinates4 = [];*///commented them because they can be used, but don't want to use them
+let dots = [];
 //let smokeBub = [];
 let yOff = 0;
 let BoatSailing;
 let ShipSinking;
 let Thunder;
+
 
  
 function preload(){
@@ -42,6 +46,10 @@ function preload(){
 
 function setup() {
   createCanvas(windowWidth, windowHeight);
+  
+  for (let d = 0; d < 1000; d++) {
+    dots[d] = new Dot();
+  }
   ship = new Ship(0, windowWidth / 3); //(xPos, yPos) of ship
   clouds = new Clouds(0, windowWidth / 3); //(xPos, yPos) of clouds
   iceberg = new Iceberg();
@@ -51,7 +59,7 @@ function setup() {
     smokeBub[i] = new Smoke(15, windowWidth / 3);
   }*/
 
-  for (let i = 0; i < 100; i++) {
+  /*for (let i = 0; i < 100; i++) {
     xCoordinates1.push(random(-215, -225));
     xCoordinates2.push(random(-95, -105));
     xCoordinates3.push(random(16, 25));
@@ -60,7 +68,7 @@ function setup() {
     yCoordinates2.push(random(25, 105));
     yCoordinates3.push(random(30, 110));
     yCoordinates4.push(random(15, 115));
-  }
+  }*/
 }
 
 function draw() {
@@ -68,7 +76,7 @@ function draw() {
 
   if (mouseIsPressed == true) {
     BoatSailing.stop();
-    Thunder.playMode('untilDone');
+    Thunder.playMode('untilDone');//play sound until done so it's not constantly playing
     Thunder.play();
   } else if (BoatSailing.isPlaying() == false) {
     BoatSailing.play();
@@ -77,10 +85,19 @@ function draw() {
 
   gradientBackground(); //calls background gradient function
 
-  noStroke();
-  textSize(20);
-  fill('white');
-  text('Keep mouse pressed to activate lightning and thunder sound', 15, 30);
+  if (keyIsPressed == true) {
+  for (let d = 0; d < 200; d++) {
+       dots[d].move();
+       dots[d].display();
+  }
+} 
+  
+   if (key === 'r') {
+  for (let d = 0; d < 200; d++) {
+       dots[d].move();
+       dots[d].display();
+  }
+} 
   
   /*for (let i = 0; i < smokeBub.length; i++) {
     smokeBub[i].display();
@@ -92,6 +109,13 @@ function draw() {
   clouds.move();
   drawingContext.shadowBlur = 0;
   clouds.display(); //calls display function within the clouds class
+  
+  noStroke();
+  textSize(20);
+  fill('white');
+  text('Keep mouse pressed to activate lightning and thunder sound', 15, 30);
+  text('Press "r" = atomatic and constant rain', 15, 50);
+  text('Press any key = momentary rain', 15, 70);
   iceberg.display();
 
   Wave1();
@@ -114,22 +138,17 @@ function gradientBackground() {
 function Wave2() {
   stroke(69, 160, 255);
   fill(69, 160, 255);
-  // We are going to draw a polygon out of the wave points
+  
   beginShape();
   let xOff = yOff;
 
-  // Iterate over horizontal pixels
+
   for (let x = 0; x <= windowWidth; x += 10) {
-    // Calculate a y value according to noise, map to
-
     let y = map(noise(xOff, yOff), 0, 1, 600, 720);
-
-    // Set the vertex
     vertex(x, y);
-    // Increment x dimension for noise
     xOff += 0.05;
   }
-  // increment y dimension for noise
+
   yOff += 0.01;
   vertex(windowWidth, windowHeight);
   vertex(0, windowHeight);
@@ -139,23 +158,16 @@ function Wave2() {
 function Wave1() {
   stroke(101, 130, 255);
   fill(101, 130, 255);
-  // We are going to draw a polygon out of the wave points
   beginShape();
   let xOff = yOff;
 
-  // Iterate over horizontal pixels
-  for (let x = 0; x <= width; x += 10) {
-    // Calculate a y value according to noise, map to
-
-    let y = map(noise(xOff, yOff), 0, 1, 550, 705);
-
-    // Set the vertex
+  for (let x = 0; x <= width; x += 10) {// Iterate over horizontal pixels
+    let y = map(noise(xOff, yOff), 0, 1, 550, 705);// Calculate a y value according to noise, map
     vertex(x, y);
-    // Increment x dimension for noise
-    xOff += 0.09;
+    xOff += 0.09;// Increase x dimension for noise
   }
-  // increment y dimension for noise
-  yOff += 0.01;
+  
+  yOff += 0.01;// Increase y dimension for noise
   vertex(windowWidth, windowHeight);
   vertex(0, windowHeight);
   endShape(CLOSE);
@@ -415,5 +427,42 @@ class Iceberg {
     triangle(1400, 90, 900, 1000, 1800, 1000);
     fill(220, 245, 254);
     triangle(1600, 130, 1200, 1000, 2000, 1000);
+  }
+}
+
+class Dot {
+  constructor() {
+    this.xPlane = random(0,windowHeight);
+    this.yPlane = random(0,windowHeight);
+    //this.zPlane = random(0,windowHeight);
+    //this.angle = 0;
+  }
+  
+  move() {
+    
+    this.ySpeed = random(5,10);
+    this.increment = 0.5;
+    this.yPlane = this.yPlane + this.ySpeed*this.increment;
+    //this.zPlane = this.zPlane-10;
+    
+    if (this.yPlane > windowHeight) {
+      this.yPlane = random(0, -windowHeight);
+      this.increment = 0;
+     }
+    /*if (this.zPlane > 800) {
+      this.zPlane = 0;
+    }
+    
+    this.xPos = map(this.xPlane/this.yPlane,0,1,0,800);
+    this.yPos = map(this.zPlane/this.yPlane,0,1,0,800);
+    
+    this.angle += 0.05;
+    this.size = map(sin(this.angle), -1, 1, -2, 4);*/
+  }
+  
+  display() {
+    noStroke();
+    fill(238,238,238);
+    ellipse(this.xPlane,this.yPlane,-3,10);
   }
 }
