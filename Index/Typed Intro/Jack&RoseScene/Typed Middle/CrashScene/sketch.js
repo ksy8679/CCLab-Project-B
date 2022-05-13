@@ -114,8 +114,8 @@ function draw() {
   textSize(20);
   fill('white');
   text('Keep mouse pressed to activate lightning and thunder sound', 15, 30);
-  text('Press "r" = atomatic and constant rain', 15, 50);
-  text('Press any key = momentary rain', 15, 70);
+  text('Press "r" = automatic and constant rain', 15, 50);
+  text('Hold any key pressed = momentary rain', 15, 70);
   iceberg.display();
 
   Wave1();
